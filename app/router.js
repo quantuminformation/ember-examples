@@ -6,11 +6,15 @@ const Router = Ember.Router.extend({
   rootURL: config.rootURL
 });
 
-Router.map(function() {
-  this.route('emberobject', function() {
+Router.map(function () {
+  this.route('emberobject', function () {
     this.route('nested');
   });
 
+
+  this.route('speakers', function() {
+    this.route('speaker');
+  });
 });
 
 export default Router;
