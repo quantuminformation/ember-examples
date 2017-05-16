@@ -1,0 +1,10 @@
+<h2>speakers route</h2>
+
+{{#each model as |speaker|}}
+ <p> {{speaker.company}} </p>
+ <p> {{speaker.name}} {{speaker.age}} <img style="height: 30px" src="{{speaker.avatar}}"> </p>
+ {{#link-to "speaker" speaker }} <button>View Profile</button>{{/link-to}}
+
+{{/each}}
+
+{{outlet}}

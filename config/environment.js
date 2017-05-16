@@ -1,6 +1,9 @@
 /* eslint-env node */
 
 module.exports = function(environment) {
+
+
+
   var ENV = {
     modulePrefix: 'ember-lifecycle',
     environment: environment,
@@ -21,6 +24,9 @@ module.exports = function(environment) {
       // Here you can pass flags/options to your application instance
       // when it is created
     }
+  };
+  ENV['ember-cli-mirage'] = {
+    enabled: true
   };
 
   if (environment === 'development') {
@@ -45,6 +51,7 @@ module.exports = function(environment) {
   if (environment === 'production') {
 
   }
+
 
   return ENV;
 };

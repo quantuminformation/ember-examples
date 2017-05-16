@@ -12,9 +12,12 @@ Router.map(function () {
   });
 
 
-  this.route('speakers', function() {
-    this.route('speaker');
-  });
+  this.route('speakers');
+  this.route('speaker',{ path: '/speakers/:id' });
+
 });
 
 export default Router;
+
+
+
