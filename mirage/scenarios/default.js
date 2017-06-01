@@ -1,7 +1,3 @@
-
-
 export default function(server) {
-
-  server.createList('speaker', 3);
-
-};
+  server.createList('speaker', 3)
+}

@@ -15,6 +15,10 @@ Router.map(function () {
   this.route('speakers');
   this.route('speaker',{ path: '/speakers/:id' });
 
+  this.route('firebase');
+  this.route('simpleModel');
+  this.route('helpers');
+  this.route('hash-model');
 });
 
 export default Router;

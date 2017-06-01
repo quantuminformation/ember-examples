@@ -1,5 +1,7 @@
 export default function () {
 
+
+
  // this.namespace = 'api';
 
   this.get('/speakers', (schema, request) => {

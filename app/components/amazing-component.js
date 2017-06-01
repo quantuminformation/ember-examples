@@ -1,5 +1,8 @@
 import Ember from 'ember';
 
+/* eslint-disable */
+
+
 export default Ember.Component.extend({
 
   didInsertElement(){

@@ -1,7 +1,7 @@
 import { moduleForComponent, test } from 'ember-qunit';
 import hbs from 'htmlbars-inline-precompile';
 
-moduleForComponent('amazing-component', 'Integration | Component | ember object', {
+moduleForComponent('amazing-component', 'Integration | Component | amazing-component', {
   integration: true
 });
 

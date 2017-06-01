@@ -1,6 +1,6 @@
 import { moduleFor, test } from 'ember-qunit';
 
-moduleFor('route:speaker', 'Unit | Route | speakers/speaker', {
+moduleFor('route:hash-model', 'Unit | Route | hash model', {
   // Specify the other units that are required for this test.
   // needs: ['controller:foo']
 });
