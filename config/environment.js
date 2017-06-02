@@ -19,8 +19,8 @@ module.exports = function(environment) {
     },
 
     featureFlags: {
-      'show-index': true,
-      'use-firebase': true,
+      'foo-feature-flag': "something",
+      'use-firebase': false,
       // Here you can pass flags/options to your application instance
       // when it is created
     },

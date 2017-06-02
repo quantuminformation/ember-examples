@@ -5,6 +5,14 @@ import Ember from 'ember';
 
 export default Ember.Component.extend({
 
+  data: { name: 'steve', age: 40 },
+
+  actions: {
+    increaseAge(){
+      this.set('data.age', this.get("data.age") + 1)
+    }
+  },
+
   didInsertElement(){
 
     var Person = Ember.Object.extend({

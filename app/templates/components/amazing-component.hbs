@@ -1,4 +1,14 @@
-<div style="background-color: antiquewhite;border: 1px solid crimson">
+<div style="background-color: antiquewhite;border: 1px solid crimson;padding: 30px;">
   <h2>This is the amazing-component component!</h2>
-  <button {{action (route-action "showAlert" 'from amazing-component.hbs')}}>Send an action from this component</button>
+  <button {{action (route-action "showAlert" 'from amazing-component.hbs')}}>Send an route action from this component
+  </button>
+
+  <!--a child component showing data down, actions up
+  -->
+  {{receives-action-and-model
+    fooProp=data
+    fooAction=(route-action "showAlert" 'from amazing-component.hbs')
+    anotherAction=(action "increaseAge")
+  }}
 </div>
+
