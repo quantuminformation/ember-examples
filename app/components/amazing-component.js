@@ -6,10 +6,24 @@ import Ember from 'ember';
 export default Ember.Component.extend({
 
   data: { name: 'steve', age: 40 },
+  position: 'Developer',
+  income: 40000,
+  jobDetails: Ember.computed('title', 'income', function () {
+    console.log("computed prop update for jobDetails")
 
+
+    return `${this.get("position")} ${this.get("income").toLocaleString('en-UK', { style: 'currency', currency: 'GBP' })}`
+  }),
+
+  log: Ember.observer('income', () => {
+    console.log(`Income changed to ${this.get("income")}`)
+  }),
   actions: {
     increaseAge(){
       this.set('data.age', this.get("data.age") + 1)
+    },
+    increaseIncome(){
+      this.set('income', this.get("income") + 1)
     }
   },
 
