@@ -19,6 +19,9 @@ export default Ember.Component.extend({
     console.log(`Income changed to ${this.get("income")}`)
   }),
   actions: {
+    foo(){
+      alert("Foo action called ")
+    },
     increaseAge(){
       this.set('data.age', this.get("data.age") + 1)
     },

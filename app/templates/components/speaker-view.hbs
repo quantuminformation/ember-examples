@@ -1,0 +1,18 @@
+<h2>Speaker route</h2>
+<div>
+  {{#if isEditMode}}
+    <div><input value="{{model.company}}"></div>
+    <div><input value="{{model.age}}" type="number"></div>
+    <div><input value="{{model.name}}"></div>
+  {{else}}
+    <p> {{model.company}} </p>
+    <p> {{model.name}} {{model.age}} <img style="height: 30px" src="{{model.avatar}}"></p>
+  {{/if}}
+
+  <div>
+    <button {{action "switchToEditMode"}}>Edit</button>
+    <button {{action "save"}}>Save</button>
+  </div>
+  {{#link-to "speakers" }}
+    <button>Back to Speakers List</button>{{/link-to}}
+</div>
