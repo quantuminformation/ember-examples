@@ -1,6 +1,9 @@
-<p>Prop from mixin: {{lastResult}}</p>
-<input type="number" oninput={{action (mut foo) value='target.value'}}>
-<button onclick={{action "update" foo}}>call mixin function</button>
+<p>component Prop from mixin: {{fooFromComponent}}</p>
+<p>static Prop from mixin: {{fooFromMixin}}</p>
+<p>Dynamic (lastResult) Prop from mixin: {{lastResult}}</p>
+<input type="number" oninput={{action (mut inputRealtimeValue) value='target.value'}}>
+<p>inputRealtimeValue: {{inputRealtimeValue}}</p>
+<button onclick={{action "update" inputRealtimeValue}}>call mixin function</button>
 
 <p>Service value: {{simple.lastResult}}</p>
 <input type="text" oninput={{action (mut simple.lastResult) value='target.value'}}>

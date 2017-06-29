@@ -3,6 +3,9 @@ import Ember from 'ember';
 export default Ember.Mixin.create({
 
 
+  fooFromMixin:"Sheesh kebabs",
+
+
   simple:Ember.inject.service(),
 
   x2(value){
