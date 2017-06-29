@@ -21,6 +21,7 @@ Router.map(function () {
   this.route('hash-model');
   this.route('mixins');
   this.route('config');
+  this.route('lifecycle');
 });
 
 export default Router;
