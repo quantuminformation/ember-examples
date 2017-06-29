@@ -19,6 +19,8 @@ Router.map(function () {
   this.route('simpleModel');
   this.route('helpers');
   this.route('hash-model');
+  this.route('mixins');
+  this.route('config');
 });
 
 export default Router;

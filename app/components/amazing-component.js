@@ -8,14 +8,14 @@ export default Ember.Component.extend({
   data: { name: 'steve', age: 40 },
   position: 'Developer',
   income: 40000,
-  jobDetails: Ember.computed('title', 'income', function () {
+  jobDetails: Ember.computed( 'income', function () {
     console.log("computed prop update for jobDetails")
-
-
-    return `${this.get("position")} ${this.get("income").toLocaleString('en-UK', { style: 'currency', currency: 'GBP' })}`
+    return `${this.get("position")} ${this.get("income").toLocaleString('en-UK', {
+      style: 'currency',
+      currency: 'GBP'
+    })}`
   }),
-
-  log: Ember.observer('income', () => {
+  log: Ember.observer('income', function () {
     console.log(`Income changed to ${this.get("income")}`)
   }),
   actions: {

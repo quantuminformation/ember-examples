@@ -1,0 +1,10 @@
+<p>Prop from mixin: {{lastResult}}</p>
+<input type="number" oninput={{action (mut foo) value='target.value'}}>
+<button onclick={{action "update" foo}}>call mixin function</button>
+
+<p>Service value: {{simple.lastResult}}</p>
+<input type="text" oninput={{action (mut simple.lastResult) value='target.value'}}>
+
+{{#each list as |item|}}
+  <li>{{item}}</li>
+{{/each}}
