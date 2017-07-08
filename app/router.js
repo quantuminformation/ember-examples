@@ -22,6 +22,9 @@ Router.map(function () {
   this.route('mixins');
   this.route('config');
   this.route('lifecycle');
+  this.route('adapter');
+  this.route('test-interactions');
+  this.route('typescript');
 });
 
 export default Router;
