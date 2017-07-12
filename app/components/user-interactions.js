@@ -47,12 +47,12 @@ export default Ember.Component.extend({
         });
         element.addEventListener('dragover', function (event) {
           event.preventDefault();
-        }); 
+        });
       });
       document.querySelector('#drag1').addEventListener('dragstart', function (event) {
         event.dataTransfer.setData("text", event.target.id);
       });
-x
+
     }
 
     init()

@@ -3,10 +3,18 @@ import moduleForAcceptance from 'ember-lifecycle/tests/helpers/module-for-accept
 
 moduleForAcceptance('Acceptance | all');
 
-test('visiting /all', function(assert) {
-  visit('/all');
+test('visiting index', function (assert) {
+  visit('/');
 
-  andThen(function() {
-    assert.equal(currentURL(), '/all');
+  andThen(function () {
+    assert.equal(currentURL(), '/');
   });
+  visit('/speakers');
+
+  andThen(function () {
+    assert.equal(currentURL(), '/speakers');
+    pauseTest()
+  });
+
+
 });
