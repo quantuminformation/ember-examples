@@ -12,6 +12,12 @@ module.exports = function(defaults) {
         'FIREBASE-storageBucket',
         'FIREBASE-messagingSenderId',
       ]
+    },
+    babel: {
+      plugins: [
+        'transform-decorators-legacy',
+        'transform-class-properties'
+      ]
     }
   });
 
