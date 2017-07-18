@@ -2,8 +2,10 @@ import Ember from 'ember'
 import { action, computed } from 'ember-decorators/object';
 import { service } from 'ember-decorators/service';
 
-export default class MyComponent extends Ember.Component {
-  @service foo
+export default class MyComponent extends Ember.Component implements ISomething {
+  //@service typescript
+
+  typescript=Ember.inject.service('')
 
   someKey = 1
   otherKey = 2
@@ -11,11 +13,18 @@ export default class MyComponent extends Ember.Component {
   @computed('someKey', 'otherKey')
   bar (someKey, otherKey) {
     // do stuff
-    return someKey + otherKey
+    return someKey + otherKey + this.get("typescript").foo;
   }
 
   @action
   handleClick () {
     // do stuff
+    return 2
   }
+}
+
+interface ISomething {
+  someKey:Number
+  otherKey:Number
+  handleClick: () => Number
 }

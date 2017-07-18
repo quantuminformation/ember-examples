@@ -1,12 +1,12 @@
 import Ember from 'ember';
 import config from './config/environment';
 
-const Router = Ember.Router.extend({
+const Router: any|Ember.Router = Ember.Router.extend({
   location: config.locationType,
   rootURL: config.rootURL
 });
 
-Router.map(function () {
+Router.map(function (): void {
   this.route('emberobject', function () {
     this.route('nested');
   });
