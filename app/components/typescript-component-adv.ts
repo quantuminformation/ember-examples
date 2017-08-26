@@ -13,18 +13,17 @@ export default class MyComponent extends Ember.Component implements ISomething {
   @computed('someKey', 'otherKey')
   bar (someKey, otherKey) {
     // do stuff
-    return someKey + otherKey + this.get("typescript").foo;
+    return someKey + otherKey
   }
 
   @action
   handleClick () {
-    // do stuff
-    return 2
+    console.log("An action called from a typescript component")
   }
 }
 
 interface ISomething {
   someKey:Number
   otherKey:Number
-  handleClick: () => Number
+  handleClick: () => void
 }

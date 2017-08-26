@@ -5,6 +5,7 @@
     "moduleResolution": "node",
     "noEmitOnError": false,
     "noEmit": true,
+    "experimentalDecorators": true,
     "baseUrl": ".",
     "paths": {
       "ember-lifecycle/tests/*": ["tests/*"],
